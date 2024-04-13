@@ -51,6 +51,8 @@ public class RegistrationPage {
     public void openRegistrationPage(){
         driver.get(URL.REGISTER_PAGE_URL);
     }
+
+
     public void registration(String name, String email,String password){
         nameInput(name);
         emailInput(email);
