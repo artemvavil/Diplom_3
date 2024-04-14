@@ -28,11 +28,11 @@ public class ProfilePage {
     public void clickLogo(){
         logo.click();
     }
-    @Step("Нажать на кнопку \"Конструктор\"")
+    @Step("Нажать на кнопку Конструктор")
     public void clickConstructorButton(){
         constructorButton.click();
     }
-    @Step ("Нажать на кнопку \"Выход\"")
+    @Step ("Нажать на кнопку Выход")
     public void clickExitButton(){
         exitButton.click();
     }
