@@ -16,6 +16,14 @@ public class ForgotPasswordPage {
         PageFactory.initElements(driver, this);
     }
 
+    @FindBy(xpath = "//div//a[text()='Войти']")
+    private WebElement loginButton;
+
+    @Step("Нажать кнопку Войти")
+    public void clickLoginButton() {
+        loginButton.click();
+    }
+
     @Step("Открыть страницу восстановления пароля")
     public void openForgotPage() {
         driver.get(URL.FORGOT_PASSWORD_PAGE_URL);

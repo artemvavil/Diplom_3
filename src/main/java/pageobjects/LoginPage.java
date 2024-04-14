@@ -37,7 +37,7 @@ public class LoginPage {
     public void inputPassword(String password){
         passwordInput.sendKeys(password);
     }
-    public void Login(String email,String password){
+    public void login(String email,String password){
         inputEmail(email);
         inputPassword(password);
         clickLoginButton();
