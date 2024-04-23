@@ -23,11 +23,11 @@ public class MainPage {
     private WebElement makeBurgerTitle; //надпись соберите бургер
     @FindBy(css = ".button_button__33qZ0.button_button_type_primary__1O7Bx.button_button_size_large__G21Vg")
     private WebElement enterButton; //кнопка "войти в аккаунт"
-    @FindBy(xpath = "//div[span[text()='Булки']]")
+    @FindBy(xpath = ".//*[contains(@class, \"tab_tab__1SPyG\")][1]")
     private WebElement bunHeading;
-    @FindBy(xpath = "//div[span[text()='Соусы']]")
+    @FindBy(xpath = ".//*[contains(@class, \"tab_tab__1SPyG\")][2]")
     private WebElement sauceHeading;
-    @FindBy(xpath = "//div[span[text()='Начинки']]")
+    @FindBy(xpath = ".//*[contains(@class, \"tab_tab__1SPyG\")][3]")
     private WebElement fillingsHeading;
 
     //Steps
@@ -66,16 +66,16 @@ public class MainPage {
     }
 
 
-    public String bunSelected() {
-        return bunHeading.getText();
+    public boolean bunSelected() {
+        return bunHeading.getAttribute("class").contains("tab_tab_type_current__2BEPc");
     }
 
-    public String sauceSelected() {
-        return sauceHeading.getText();
+    public boolean sauceSelected() {
+        return sauceHeading.getAttribute("class").contains("tab_tab_type_current__2BEPc");
     }
 
-    public String fillingsSelected() {
-        return fillingsHeading.getText();
+    public boolean fillingsSelected() {
+        return fillingsHeading.getAttribute("class").contains("tab_tab_type_current__2BEPc");
 
     }
 }
