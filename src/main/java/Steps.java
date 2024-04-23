@@ -1,12 +1,9 @@
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import clientApi.PostApi;
-import io.restassured.specification.Argument;
+import clientapi.PostApi;
 import json.LoginCard;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-
-import java.util.List;
 
 public class Steps {
     LoginCard loginCard;

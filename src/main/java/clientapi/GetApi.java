@@ -1,4 +1,4 @@
-package clientApi;
+package clientapi;
 
 import constants.Endpoints;
 

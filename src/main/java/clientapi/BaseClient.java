@@ -1,6 +1,4 @@
-package clientApi;
-
-import constants.Endpoints;
+package clientapi;
 
 import constants.URL;
 import io.restassured.RestAssured;

@@ -1,14 +1,12 @@
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import json.LoginCard;
 import json.RegistrationCard;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import clientApi.DeleteApi;
-import clientApi.GetApi;
-import clientApi.PostApi;
-import org.openqa.selenium.chrome.ChromeDriver;
+import clientapi.DeleteApi;
+import clientapi.GetApi;
+import clientapi.PostApi;
 import pageobjects.*;
 
 import java.util.concurrent.TimeUnit;
@@ -27,10 +25,11 @@ public class StartQuitTest {
     String accessToken;
     ProfilePage profilePage;
 
+    GetBrowser browser = new GetBrowser();
+
     @Before
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = browser.getWebDriver();
         driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 
         mainPage = new MainPage(driver);

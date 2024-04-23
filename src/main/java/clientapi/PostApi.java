@@ -1,6 +1,5 @@
-package clientApi;
+package clientapi;
 
-import clientApi.BaseClient;
 import constants.Endpoints;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
