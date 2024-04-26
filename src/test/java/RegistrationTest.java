@@ -20,6 +20,7 @@ public class RegistrationTest extends StartQuitTest {
     public void registrationTest() {
         registrationPage.registration(registrationCard.getName(), registrationCard.getEmail(), registrationCard.getPassword());
         steps.apiAuth(200, "user.email", loginCard.getEmail());
+        deleteApi.deleteUser(accessToken);
     }
 
     @Test
